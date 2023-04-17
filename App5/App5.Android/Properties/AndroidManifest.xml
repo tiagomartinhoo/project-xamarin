@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.app5">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
-    <application android:label="App5.Android" android:theme="@style/MainTheme"></application>
+    <application android:label="App5.Android" android:theme="@style/MainTheme">
+
+		<activity 
+			android:name="com.companyname.app5.SplashScreenActivity"
+			android:theme="@style/MyTheme.SplashScreen"
+			android:noHistory="true"
+			android:screenOrientation="portrait"
+			>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+	</application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
