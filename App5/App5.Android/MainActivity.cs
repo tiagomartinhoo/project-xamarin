@@ -34,6 +34,7 @@ namespace App5.Droid
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
                 builder
+                    .SetTitle(Resources.GetString(Resource.String.leave_confirmation_title))
                     .SetMessage(Resources.GetString(Resource.String.leave_confirmation_message))
                     .SetPositiveButton(Resources.GetString(Resource.String.yes), (dialog, args) =>
                         {

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
+	<string name="leave_confirmation_title">Bestätigung</string>
 	<string name="leave_confirmation_message">Möchtest du gehen?</string>
 	<string name="yes">Ja</string>
 	<string name="no">Nein</string>

@@ -18,14 +18,21 @@ namespace App5
 
             navPage = navigationPage;
 
-            webView = new WebView
+            if (Connectivity.NetworkAccess == NetworkAccess.Internet)
             {
-                Source = url,
-                VerticalOptions = LayoutOptions.FillAndExpand
-            };
+                webView = new WebView
+                {
+                    Source = url,
+                    VerticalOptions = LayoutOptions.FillAndExpand
+                };
 
-            Content = webView;
-            webView.Navigating += On_Navigating;
+                Content = webView;
+                webView.Navigating += On_Navigating;
+            }
+            else
+            {
+                DisplayAlert("No connection", "Check your internet connection and try again.", "OK");
+            }
         }
 
         protected override bool OnBackButtonPressed()
