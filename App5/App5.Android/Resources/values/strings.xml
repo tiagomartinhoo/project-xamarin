@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
+	<string name="app_name">Xamarin</string>
+	
 	<string name="leave_confirmation_title">Confirmation</string>
 	<string name="leave_confirmation_message">Do you want to leave?</string>
 	<string name="yes">Yes</string>
