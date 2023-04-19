@@ -24,5 +24,30 @@ namespace App5.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+        
+        public override void OnBackPressed()
+        {
+            MainPage mainPage = Xamarin.Forms.Application.Current.MainPage as MainPage;
+
+            if (mainPage != null && mainPage.isOnInitialPage)
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                builder
+                    .SetMessage(Resources.GetString(Resource.String.leave_confirmation_message))
+                    .SetPositiveButton(Resources.GetString(Resource.String.yes), (dialog, args) =>
+                        {
+                            // Close the activity
+                            Finish();
+                        })
+                    .SetNegativeButton(Resources.GetString(Resource.String.no), (dialog, args) => { });
+
+                builder.Show();
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+        }
     }
 }

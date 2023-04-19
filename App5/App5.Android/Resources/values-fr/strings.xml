@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<string name="leave_confirmation_message">Veux-tu partir?</string>
+	<string name="yes">Oui</string>
+	<string name="no">Non</string>
+</resources>
