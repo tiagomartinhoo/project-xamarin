@@ -1,22 +1,17 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Essentials;
-using System.Linq;
 
 namespace App5
 {
     public partial class MainPage : ContentPage
     {
         private readonly WebView webView;
-        private readonly NavigationPage navPage;
         public bool isOnInitialPage = true;
-        private int pageCounter = 0;
 
-        public MainPage(string url, NavigationPage navigationPage)
+        public MainPage(string url)
         {
             InitializeComponent();
-
-            navPage = navigationPage;
 
             if (Connectivity.NetworkAccess == NetworkAccess.Internet)
             {
@@ -39,13 +34,11 @@ namespace App5
         {
             if (!isOnInitialPage)
             {
-                pageCounter--;
                 webView.GoBack();
                 return true;
             }
             else
             {
-                Device.BeginInvokeOnMainThread(async () => await navPage.PopAsync());
                 return base.OnBackButtonPressed();
             }
         }
@@ -65,13 +58,7 @@ namespace App5
                 }
                 else
                 {
-                    pageCounter++;
-                    isOnInitialPage = pageCounter == 1;
-                    // Push the initial page onto the navigation stack.
-                    if (isOnInitialPage && !navPage.Navigation.NavigationStack.Contains(this))
-                    {
-                        await navPage.PushAsync(this);
-                    }
+                    isOnInitialPage = appUri == uri;
                 }
             }
         }

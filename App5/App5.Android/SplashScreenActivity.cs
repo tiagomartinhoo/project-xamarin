@@ -1,18 +1,11 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace com.companyname.app5
 {
-    [Activity(Label = "SplashScreenActivity", Theme = "@style/MyTheme.SplashScreen", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "SplashScreenActivity", Theme = "@style/MyTheme.SplashScreen", MainLauncher = false, NoHistory = true)]
     public class SplashScreenActivity : Activity
     {
         public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)

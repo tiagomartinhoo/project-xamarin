@@ -15,8 +15,8 @@ namespace App5
                 return;
             }
             
-            Application.Current.Properties["appUrl"] = url;
-            MainPage = new MainPage(url, new NavigationPage());
+            Current.Properties["appUrl"] = url;
+            MainPage = new MainPage(url);
         }
 
         private static bool IsValidUrl(string url)
