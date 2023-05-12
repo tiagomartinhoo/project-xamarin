@@ -102,19 +102,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values-pt\strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values-de\strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values-es\strings.xml" />
-  </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <AndroidResource Include="Resources\values-fr\strings.xml" />
-  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap\app_icon.png" />
   </ItemGroup>
